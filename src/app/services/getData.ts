@@ -11,6 +11,12 @@ export class GetDataServise {
     return `https://swapi.dev/api/${kind}/${num}`;
   }
 
+  //https://lviv.ua.museum-digital.org/object/53142
+
+  getMuseum() {
+    return this.http.get(`https://lviv.ua.museum-digital.org/object/53142`);
+  }
+
   getData(kind: string, id: number) {
     return this.http.get(this.url(kind, id));
   }
