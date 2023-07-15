@@ -25,6 +25,12 @@ export class GetPeopleComponent  {
   }
 
   addPeople() {
+       this.rs.getMuseum().subscribe({
+           next: (res: any) => {
+             console.log(res)
+           },
+           error: (err: Error) => console.log(err),
+       })
     if (this.store.peopleUrl) {
       this.rs.getPage(this.store.peopleUrl).subscribe({
         next: (res: any) => {
