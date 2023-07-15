@@ -21,6 +21,7 @@ export class GetPeopleComponent  {
 
 
   onScroll() {
+    console.log("DDDDDD)
     this.addPeople();
   }
 
